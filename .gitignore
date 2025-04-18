@@ -1,0 +1,11 @@
+# Node paketleri
+node_modules/
+
+# Ortam değişkenleri
+.env
+
+# Veritabanı dosyası
+stats.sqlite
+
+# IDE ayarları
+.idea/
