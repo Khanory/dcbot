@@ -12,9 +12,10 @@ module.exports = {
 
         if (!userB){
             const members = await msg.guild.members.fetch();
-            const pool = members.filter(m=>!m.user.bot && m.id!==author.id).map(m=>m.user);
-            if (!pool.length) return msg.reply('Uygun kullanıcı yok.');
-            userB = pool.random();
+            const pool = members
+                .filter(m => !m.user.bot && m.id !== author.id)
+                .map(m => m.user);
+            userB = pool[Math.floor(Math.random() * pool.length)];
         }
 
         let pct = Math.floor(Math.random()*101);
